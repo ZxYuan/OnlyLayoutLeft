@@ -32,24 +32,6 @@ def processTag(soup, tag_name):
 		newstr = genRandomText(e.string)
 		e.string.replace_with(newstr)
 
-if __name__ == 'a__main__':
-	filename = u'Electronics, Cars, Fashion, Collectibles, Coupons and More Online Shopping _ eBay.htm'
-	html_doc = open('stimulus/'+filename).read()
-	soup = BeautifulSoup(html_doc, 'lxml')
-	for e in soup.find_all():
-		if unicode(e.string) == 'None':
-			for s in e.strings:
-				print(repr(s))
-				#newstr = genRandomText(e.string)
-				#s.replace_with('hamasile')
-			continue
-		newstr = genRandomText(e.string)
-		e.string.replace_with(newstr)
-	out_htm = str(soup)
-	outfile = open('stimulus/out.htm','w')
-	outfile.write(out_htm)
-	outfile.close()
-
 if __name__ == '__main__':
 	filename = u'Electronics, Cars, Fashion, Collectibles, Coupons and More Online Shopping _ eBay.htm'
 	html_doc = open('stimulus/'+filename).read()
