@@ -70,6 +70,7 @@ if __name__ == '__main__':
 	processTag(soup, 'input')
 	processTag(soup, 'span')
 	processTag(soup, 'div')
+	processTag(soup, 'h2')
 	
 	out_htm = str(soup)
 	outfile = open('stimulus/out.htm','w')
