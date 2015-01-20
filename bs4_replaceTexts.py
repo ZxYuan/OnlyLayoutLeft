@@ -60,7 +60,7 @@ def processTag(soup, tag_name):
 		processTag_text(tags)
 
 if __name__ == '__main__':
-	filename = u'Amazon.com  Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more.htm'
+	filename = u'Electronics, Cars, Fashion, Collectibles, Coupons and More Online Shopping _ eBay.htm'
 	html_doc = open('stimulus/'+filename).read()
 	soup = BeautifulSoup(html_doc, 'lxml')
 	
