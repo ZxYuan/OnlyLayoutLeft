@@ -4,8 +4,8 @@ import os
 import cStringIO, urllib2
 from PIL import Image
 
-prefix = 'stimulus/Electronics, Cars, Fashion, Collectibles, Coupons and More Online Shopping _ eBay'
-directory_name = prefix+'_files/'
+prefix = u'Trending stories on Indian Lifestyle, Culture, Relationships, Food, Travel, Entertainment, News & New Technology News - Indiatimes.com'
+directory_name = u'stimulus/'+prefix+u'_files/'
 
 print 'Generating images...'
 pngnames = []

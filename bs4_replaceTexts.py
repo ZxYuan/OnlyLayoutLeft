@@ -60,17 +60,33 @@ def processTag(soup, tag_name):
 		processTag_text(tags)
 
 if __name__ == '__main__':
-	filename = u'Electronics, Cars, Fashion, Collectibles, Coupons and More Online Shopping _ eBay.htm'
+	filename = u'Trending stories on Indian Lifestyle, Culture, Relationships, Food, Travel, Entertainment, News & New Technology News - Indiatimes.com.htm'
 	html_doc = open('stimulus/'+filename).read()
 	soup = BeautifulSoup(html_doc, 'lxml')
-	
+	#print soup.body
 	#processTag(soup, 'all_tags')
 	processTag(soup, 'a')
 	processTag(soup, 'p')
 	processTag(soup, 'input')
 	processTag(soup, 'span')
 	processTag(soup, 'div')
+	processTag(soup, 'h1')
 	processTag(soup, 'h2')
+	processTag(soup, 'h3')
+	processTag(soup, 'h4')
+	processTag(soup, 'h5')
+	processTag(soup, 'label')
+	processTag(soup, 'button')
+	processTag(soup, 'li')
+	processTag(soup, 'strong')
+	processTag(soup, 'em')
+	processTag(soup, 'small')
+	processTag(soup, 'dt')
+	processTag(soup, 'dl')
+	processTag(soup, 'dd')
+	processTag(soup, 'th')
+	processTag(soup, 'td')
+	processTag(soup, 'u')
 	
 	out_htm = str(soup)
 	outfile = open('stimulus/out.htm','w')
